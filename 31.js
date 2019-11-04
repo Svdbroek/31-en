@@ -32,5 +32,10 @@ let showHand =(playerNumber)=>{
 
 shuffle(1)
 showHand(1)
-let card = [[K,S,10],[A,S,11],[2,D,2]]
-document.getElementById("card1").src = (`./cards/${card[0][0]}${card[0][1]}`)
+
+/*
+let card = [['K','S',10],['A','S',11],['2','D',2]]
+document.getElementById("card1").src = (`./cards/${card[0][0]}${card[0][1]}.png`)
+
+use code like this to display the drawn cards 
+*/
