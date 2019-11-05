@@ -27,10 +27,9 @@ let showHand =(playerNumber)=>{
     document.getElementById("cardt3").src = (`./cards/${hands[0][2][0]}${hands[0][2][1]}.png`)
     
     //hand cards
-    
-    document.getElementById("cardh1").src = (`./cards/${hands[0][0][0]}${hands[0][0][1]}.png`)
-    document.getElementById("cardh2").src = (`./cards/${hands[0][1][0]}${hands[0][1][1]}.png`)
-    document.getElementById("cardh3").src = (`./cards/${hands[0][2][0]}${hands[0][2][1]}.png`)
+    document.getElementById("cardh1").src = (`./cards/${hands[playerNumber][0][0]}${hands[playerNumber][0][1]}.png`)
+    document.getElementById("cardh2").src = (`./cards/${hands[playerNumber][1][0]}${hands[playerNumber][1][1]}.png`)
+    document.getElementById("cardh3").src = (`./cards/${hands[playerNumber][2][0]}${hands[playerNumber][2][1]}.png`)
 
     //add functionality to change cards (buttons/ checkmarks?)
     }
@@ -38,10 +37,3 @@ let showHand =(playerNumber)=>{
 
 shuffle(1)
 showHand(1)
-
-/*
-let card = [['K','S',10],['A','S',11],['2','D',2]]
-document.getElementById("card1").src = (`./cards/${card[0][0]}${card[0][1]}.png`)
-
-use code like this to display the drawn cards 
-*/
