@@ -1,7 +1,8 @@
 const hands = []
 
 let shuffle = (players) => {
-    const deck = [' 7 of Spades',  '8 of Spades', ' 9 of Spades', ' 10 of Spades', ' Jack of Spades', ' Queen of Spades', ' King of Spades', ' Ace of Spades', ' 7 of Hearts', ' 8 of Hearts', ' 9 of Hearts', ' 10 of Hearts', ' Jack of Hearts', ' Queen of Hearts', ' King of Hearts', ' Ace of Hearts', ' 7 of Clubs', ' 8 of Clubs', ' 9 of Clubs', ' 10 of Clubs', ' Jack of Clubs', ' Queen of Clubs', ' King of Clubs', ' Ace of Clubs', ' 7 of Diamonds', ' 8 of Diamonds', ' 9 of Diamonds', ' 10 of Diamonds', ' Jack of Diamonds', ' Queen of Diamonds', ' King of Diamonds', ' Ace of Diamonds'];
+   
+    const deck =[['7','S',7],['8','S',8],['9','S',9],['10','S',10],['J','S',10],['Q','S',10],['K','S',10],['A','S',11],['7','C',7],['8','C',8],['9','C',9],['10','C',10],['J','C',10],['Q','C',10],['K','C',10],['A','C',11],['7','H',7],['8','H',8],['9','H',9],['10','H',10],['J','H',10],['Q','H',10],['K','H',10],['A','H',11],['7','D',7],['8','D',8],['9','D',9],['10','D',10],['J','D',10],['Q','D',10],['K','D',10],['A','D',11]]
     const playCards = []
     for (let i = 0; i < players * 3 + 3; i++) {
         let draw = Math.floor((Math.random() * deck.length))
@@ -19,11 +20,20 @@ let shuffle = (players) => {
 }
 
 let showHand =(playerNumber)=>{
+    //tablecards
+    console.log(hands)
+    document.getElementById("cardt1").src = (`./cards/${hands[0][0][0]}${hands[0][0][1]}.png`)
+    document.getElementById("cardt2").src = (`./cards/${hands[0][1][0]}${hands[0][1][1]}.png`)
+    document.getElementById("cardt3").src = (`./cards/${hands[0][2][0]}${hands[0][2][1]}.png`)
     
-    document.getElementById("tafel").innerHTML = (`You have the following cards in hand:${hands[playerNumber]} ,`);
-     
-    document.getElementById("hand").innerHTML = ( `and the following cards are on the table:${hands[0]}` );
+    //hand cards
+    document.getElementById("cardh1").src = (`./cards/${hands[playerNumber][0][0]}${hands[playerNumber][0][1]}.png`)
+    document.getElementById("cardh2").src = (`./cards/${hands[playerNumber][1][0]}${hands[playerNumber][1][1]}.png`)
+    document.getElementById("cardh3").src = (`./cards/${hands[playerNumber][2][0]}${hands[playerNumber][2][1]}.png`)
+
+    //add functionality to change cards (buttons/ checkmarks?)
     }
+
 
 shuffle(1)
 showHand(1)
