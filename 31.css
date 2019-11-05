@@ -1,0 +1,29 @@
+body{
+    background: #465f51;
+}
+
+.playField{
+    margin: 0 10% 0 10%;
+
+    max-width: 90%;
+}
+
+.playField img{
+    max-width: 33%;
+    margin: auto;
+    border: 0;
+    padding: 0;
+}
+
+.playField h2{
+ margin: 0 25% 0 25%;
+}
+
+.hand{
+    margin: 20px 0 
+}
+
+.playingCards{
+    display: flex;
+}
+
