@@ -35,5 +35,5 @@ let showHand =(playerNumber)=>{
     }
 
 
-shuffle(1)
+shuffle(3)
 showHand(1)
